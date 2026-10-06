@@ -290,7 +290,22 @@ html a.room:hover::after{background:var(--acc-mid)}
 /* 위치 표시줄: 지금 있는 곳(학기)은 진하게, 누르지 않는 글자 */
 html .crumb .c-cur{color:var(--ink);font-weight:700;cursor:default}
 html .crumb .c-cur:hover{background:none}
-</style><!--/hj-theme--></head><body><main>
+</style><!--/hj-theme--><style id="gc-top-css">
+:root{--gct-bg:#FFF9F3;--gct-line:#EFE3D6;--gct-ink:#2A221C;--gct-tile:#FBE6DC;--gct-ico:#C0704A;--gct-hover:#FBEFE6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--gct-bg:#211B17;--gct-line:#3A302A;--gct-ink:#F4ECE4;--gct-tile:#3B2A22;--gct-ico:#F0A47E;--gct-hover:#2C241F}}
+:root[data-theme="dark"]{--gct-bg:#211B17;--gct-line:#3A302A;--gct-ink:#F4ECE4;--gct-tile:#3B2A22;--gct-ico:#F0A47E;--gct-hover:#2C241F}
+#gc-top{position:sticky;top:0;z-index:90;display:flex;align-items:center;min-height:64px;padding:8px max(16px,env(safe-area-inset-left));
+ background:var(--gct-bg);border-bottom:1px solid var(--gct-line);box-sizing:border-box;margin:0}
+#gc-top a{display:inline-flex;align-items:center;gap:14px;padding:4px 10px 4px 4px;border-radius:16px;text-decoration:none!important;color:var(--gct-ink)!important;
+ font-family:"Pretendard Variable",Pretendard,system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-weight:800;font-size:clamp(22px,2.4vw,28px);
+ letter-spacing:-.02em;line-height:1.2;word-break:keep-all}
+#gc-top a:hover{background:var(--gct-hover)}
+#gc-top a:focus-visible{outline:3px solid var(--gct-ico);outline-offset:2px}
+#gc-top .gct-ico{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:15px;background:var(--gct-tile);color:var(--gct-ico);flex:none}
+#gc-top .gct-ico svg{width:24px;height:24px}
+html.gc-full #gc-top,body:has(#slides:not([hidden])) #gc-top{display:none}
+@media print{#gc-top{display:none!important}}
+</style></head><body><!--gc-top--><div id="gc-top"><a href="../../../index.html" title="첫 화면으로 가요"><span class="gct-ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.4"/><path d="M3.6 12h16.8M12 3.6c2.3 2.3 3.4 5.1 3.4 8.4s-1.1 6.1-3.4 8.4c-2.3-2.3-3.4-5.1-3.4-8.4S9.7 5.9 12 3.6Z"/></svg></span><span>세계시민교육</span></a></div><script>document.addEventListener('fullscreenchange',function(){document.documentElement.classList.toggle('gc-full',!!document.fullscreenElement)})</script><!--/gc-top--><main>
 <nav class="crumb" aria-label="현재 위치"><a class="c-link" href="../index.html">도서 활용 세계시민교육</a></nav>
 <h1><span class="h-ico" aria-hidden="true">🕊️</span>11. 갈등과 평화</h1>
 <p class="sub">평화의 뜻을 넓게 이해하고, 갈등을 폭력 없이 대화로 풀어 가는 방법을 연습해요. 이 주제와 함께 읽을 책을 학년 묶음별로 골라 보세요.</p>

@@ -843,7 +843,22 @@ html body.ov>.hj-contact,html body.ov>p.made,html body.ov>.made{display:none!imp
 /* 2026-10-03 선생님 요청: 수업 앱(첫 화면·진행 화면)에는 이메일·유튜브 줄을 숨김. 메뉴 페이지(첫 화면~학기 목록)에는 그대로 보임(메뉴는 이 덮개를 쓰지 않음). 우리 반 교실(class)은 제외 */
 html body:not(.mix) .hj-contact,html body:not(.mix) .hj-contact.hj-cvc{display:none!important}
 html body .frameline{display:flex!important;flex-wrap:wrap;justify-content:center;align-items:baseline;column-gap:.3em;row-gap:.2em}html body .frameline input{max-width:100%;text-align:center}
-</style><!--/hj-ctheme--><style id="gc-nohome">.hj-nav a.hj-nh,a.hj-homemini,#hj-home{display:none!important}</style></head><body>
+</style><!--/hj-ctheme--><style id="gc-nohome">.hj-nav a.hj-nh,a.hj-homemini,#hj-home{display:none!important}</style><style id="gc-top-css">
+:root{--gct-bg:#FFF9F3;--gct-line:#EFE3D6;--gct-ink:#2A221C;--gct-tile:#FBE6DC;--gct-ico:#C0704A;--gct-hover:#FBEFE6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--gct-bg:#211B17;--gct-line:#3A302A;--gct-ink:#F4ECE4;--gct-tile:#3B2A22;--gct-ico:#F0A47E;--gct-hover:#2C241F}}
+:root[data-theme="dark"]{--gct-bg:#211B17;--gct-line:#3A302A;--gct-ink:#F4ECE4;--gct-tile:#3B2A22;--gct-ico:#F0A47E;--gct-hover:#2C241F}
+#gc-top{position:sticky;top:0;z-index:90;display:flex;align-items:center;min-height:64px;padding:8px max(16px,env(safe-area-inset-left));
+ background:var(--gct-bg);border-bottom:1px solid var(--gct-line);box-sizing:border-box;margin:0}
+#gc-top a{display:inline-flex;align-items:center;gap:14px;padding:4px 10px 4px 4px;border-radius:16px;text-decoration:none!important;color:var(--gct-ink)!important;
+ font-family:"Pretendard Variable",Pretendard,system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-weight:800;font-size:clamp(22px,2.4vw,28px);
+ letter-spacing:-.02em;line-height:1.2;word-break:keep-all}
+#gc-top a:hover{background:var(--gct-hover)}
+#gc-top a:focus-visible{outline:3px solid var(--gct-ico);outline-offset:2px}
+#gc-top .gct-ico{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:15px;background:var(--gct-tile);color:var(--gct-ico);flex:none}
+#gc-top .gct-ico svg{width:24px;height:24px}
+html.gc-full #gc-top,body:has(#slides:not([hidden])) #gc-top{display:none}
+@media print{#gc-top{display:none!important}}
+</style></head><body><!--gc-top--><div id="gc-top"><a href="../../../index.html" title="첫 화면으로 가요"><span class="gct-ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.4"/><path d="M3.6 12h16.8M12 3.6c2.3 2.3 3.4 5.1 3.4 8.4s-1.1 6.1-3.4 8.4c-2.3-2.3-3.4-5.1-3.4-8.4S9.7 5.9 12 3.6Z"/></svg></span><span>세계시민교육</span></a></div><script>document.addEventListener('fullscreenchange',function(){document.documentElement.classList.toggle('gc-full',!!document.fullscreenElement)})</script><!--/gc-top-->
 <main>
 <p class="rd-area">📖 도서 활용 세계시민교육 · 세계시민교육 첫걸음 · 중학년(3·4학년)</p>
 <h1>02. 서로 이어진 지구촌 · 중학년</h1>
